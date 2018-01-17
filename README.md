@@ -8,11 +8,11 @@ Obviously you will need [Docker](https://www.docker.com/) to run, build and upda
 
 ## How to use the local-npm docker
 
-Using the local-npm docker is quite easy. Simply run one of the automated builds which are available on [Dockerhub](https://hub.docker.com/r/orlandohohmeier/local-npm/) and configure npm to use your new local registry.
+Using the local-npm docker is quite easy. Simply run one of the automated builds which are available on [Dockerhub](https://hub.docker.com/r/danhamilt1/local-npm/) and configure npm to use your new local registry.
 
 Use the following command to pull the latest image and run it (recommended method of installation):
 
-	$ docker run -d -v "$PWD/data":/data -p 5080:5080 orlandohohmeier/local-npm:latest
+	$ docker run -d -v "$PWD/data":/data -p 5080:5080 danhamilt1/local-npm:latest
 
 _This command will start the `local-npm` container, mount a data volume (working-directory/data) as `/data` and map the container port (`5080`- default local-npm port) to the host port (`5080`)_
 
