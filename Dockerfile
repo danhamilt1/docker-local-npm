@@ -1,6 +1,6 @@
-FROM node:6.0.0
+FROM node:8.0.0
 
-MAINTAINER Orlando Hohmeier <hello@orlandohohmeier.com>
+MAINTAINER danhamilt1
 
 WORKDIR /local-npm
 ADD . /local-npm/
@@ -24,4 +24,4 @@ CMD mkdir -p "$DATA_DIRECTORY" chmod 700 "$DATA_DIRECTORY" \
     && chown -R local-npm "$DATA_DIRECTORY" \
     && npm start -- --remote $REMOTE_REGISTRY \
         --remote-skim $REMOTE_REGISTRY_SKIMDB --directory $DATA_DIRECTORY \
-        --url-base $BASE_URL
+        --url $BASE_URL
